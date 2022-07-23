@@ -1,0 +1,1 @@
+untuk melihat latihan fetch ada di bagian latihan callback
