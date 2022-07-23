@@ -5,7 +5,7 @@ karena mungkin ada beberapa file yang tidak bisa dijalankan dikarenakan saya tel
 
 syarat menjalankan node js
  - mempunyai node js
- - harus menginstall npm
+ - harus menginstall module dari npm
 
 jika ingin berfungsi instal kembali folder node_module dan beberapa method lain.
 
