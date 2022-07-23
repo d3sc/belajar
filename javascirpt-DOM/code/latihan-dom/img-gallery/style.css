@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}
+
+body {
+  text-align: center;
+  background-color: #ccc;
+}
+
+.container {
+  width: 600px;
+  margin: 10px auto;
+  border: 5px solid white;
+  overflow: auto; /* membungkus semua gambar */
+}
+
+.container .jumbo {
+  width: 600px;
+}
+
+.thumbnile img {
+  width: 200px;
+  float: left; /* membuat gambar kesamping */
+  border: 2px solid white;
+  box-sizing: border-box; /* untuk tidak memperdulikan bordernya */
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.thumbnile img:hover {
+  opacity: 0.3;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+.active {
+  opacity: 0.5;
+}
