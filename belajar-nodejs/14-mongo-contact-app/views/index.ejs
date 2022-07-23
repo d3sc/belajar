@@ -1,0 +1,23 @@
+<!-- adalah untuk mengambil output dari variable nama  -->
+<div class="container">
+  <h1>Node js Server | made by <%= nama %></h1>
+
+  <h4>Daftar Mahasiswa</h4>
+
+  <!-- 1. Melakukan Control Flow pada ejs -->
+
+  <!-- 1.2 Melakukan pengulangan pada object mahasiswa -->
+  <% if (mahasiswa.length < 1) { %>
+  <p>Data Mahasiswa masih kosong!</p>
+  <% } else { %>
+
+  <!-- 1.3 Melakukan pengulangan forEach pada object mahasiswa -->
+  <% mahasiswa.forEach(mhs => { %>
+  <ul>
+    <!-- Mengisi li dengan object dari mahasiswa -->
+    <li>Nama: <%= mhs.nama %></li>
+    <li>Umur: <%= mhs.umur %></li>
+  </ul>
+
+  <% }) %> <% } %>
+</div>
