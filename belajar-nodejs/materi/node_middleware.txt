@@ -1,0 +1,33 @@
+1. Middleware?
+
+"Subuah Software yang menghubungkan software atau aplikasi lain".
+
+jadi middleware itu adalah software yang menghubungkan software yang lain.
+
+2. Express Middleware?
+
+"Aplikasi Express yang dibuat itu sebenarnya berisi serangkaian pemanggilan fungsi middleware".
+
+Express menganggap apapun yang diproses setelah user melakukan request dan sebelum user menerima response itu adalah middleware, jadi express menyebutnya itu function middleware.
+
+middleware itu dibuat menjadi sebuah Funtion.
+
+3. Function Middleware
+
+"sebuah fungsi yang memiliki akses ke object (req), object response (res), dan fungsi middleware berikutnya (next)."
+
+4. type Express Middleware
+
+1. User-defined Middleware (Middleware yang dibikin sendiri).
+	1.2 Application-level Middleware
+	1.3 Router-level Middleware
+	1.4 Error-handling middleware
+2. Built-in Middleware (Middleware yang sudah tertanam didalam express.)
+3. Third-Party Middleware (Middleware yang sudah dibuatkan oleh orang lain.) dan bukan sebagai module, tetapi sebagai middleware.
+
+// ! Jika Fungsi middleware yang sedang dijalankan tidak mengakhiri siklus request dan response maka harus memanggil fungsi next() untuk memberitahu kita untuk masuk ke middleware berikutnya. dan jika tidak, maka yang terjadi requestnya akan hanging.
+
+// * Routing / Route juga bisa dianggap sebagai sebuah middleware karena fungsi routing adalah sebuah program yang berjalan setelah kita melakukan req dan sebelum halaman tampil ke layar.
+
+// ! didalam app.get tidak perlu di isi argument next karena setelah dijalankan dia akan berhenti, bukan hanging tetapi selesai.
+

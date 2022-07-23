@@ -1,0 +1,27 @@
+1. REPL
+Read Eval Print Loop
+
+cara kerja nya sama seperti consol di browser
+
+dan coba dibaca di bagian terminal node
+
+terminal -> ketik node -> itu adalah REPL
+
+2. Kode UNIX
+
+pwd // untuk mengecek direktori kita
+
+ls // untuk melihat isi direktori
+
+cd (nama folder) // untuk memindahkan direktori
+
+cd .. // untuk naik ke satu folder ke atas
+
+mkdir (nama folder) // untuk membuat folder dengan terminal /git bash
+
+touch (nama file) // untuk membuat file dengan terminal / dengan git bash
+
+rm (nama file) // untuk menghapus file dengan terminal / dengan git bash
+
+clear untuk menghapus pesan
+

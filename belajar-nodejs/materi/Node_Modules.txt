@@ -1,0 +1,24 @@
+1. module?
+
+module adalah sekumpulan code yang dapat digunakan kembali, dengan antarmuka yang terdefinisi.
+
+2. node modules?
+
+Fungsionalitas yang simpel ataupun kompleks yang tersimpan di dalam sebuah file javascript, yang dapat kita gunakan kembali pada aplikasi node js.
+
+3. perilaku node modules
+
+setiap modul di dalam node js memiliki konteks nya masing masing, tidak bisa saling tercamput dengan modul lain pada lingkup global. (kecuali melakukan export dan require).
+
+4. Type node modules
+
+	A. Core Modules (Module bawaan node js yang ada di library nya.)
+	B. Local Modules (Module yang kita bikin sendiri.)
+	C. Third-Party Modules (module yang dibikin oleh orang lain. (NPM))
+
+5. require
+Function require akan mencari modul dengan urutan sebagai berikut:
+yang akan pertama kali dicari adalah
+1. Core Modules
+2. Local Modules atau File dan direktori (./ atau / atau ../).
+3. Third-party Modules (folder 'node_modules')
