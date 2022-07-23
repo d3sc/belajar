@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>transisi</title>
+    <style>
+      body {
+        background-color: #121111;
+        font-family: roboto;
+        text-align: center;
+      }
+      .ketengah {
+        width: 500px;
+        margin: 10px auto;
+      }
+
+      .kotak4 {
+        width: 100px;
+        background: #fff;
+        height: 60px;
+        position: relative;
+        right: 300px;
+        margin-left: 10px;
+        border-radius: 5%;
+        -webkit-transition: width 1s;
+        transition: width 1s;
+      }
+
+      .kotak4:hover {
+        width: 400px;
+      }
+      .kotak4 {
+        transition-timing-function: ease-out;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ketengah">
+      <div class="kotak4">Download</div>
+    </div>
+  </body>
+</html>
