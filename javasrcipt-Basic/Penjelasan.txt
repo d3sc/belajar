@@ -1,0 +1,27 @@
+Penjelasan di JS
+
+Boolean dapat diisi dengan tipe data string
+undefined adalah suatu kondisi dimana jika kita membuat sebuah variable dan belum diisi contoh
+
+var x
+
+dan contoh variable yang diisi adalah
+
+var x = 10
+
+sementara null adalah nilai kosong yang bisa diberikan pada sebuah variable
+
+var x = (null)
+
+jika ingin memahami Variable, kita harus paham 3 hal berikut deklarasi,inisialisasi,assignment
+
+var x; // adalah sebuah deklarasi & inisialisasi
+
+x = 20; // adalah sebuah assignment
+
+* //Camel Case adalah sebuah format dari variable yang sering digunakan oleh programmer JS, yang kata awalnya diisi oleh huruf kecil lalu setelahnya huruf kapital dan tidak boleh ada spasi. contohnya :
+
+var namaVariabelPanjang
+
+
+yang dapat diisi di dalam variable adalah : angka, string, boolean.

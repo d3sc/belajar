@@ -1,0 +1,13 @@
+function declaration
+
+* lebih fleksibel(dapat ditulis dimanapun)
+* dapat dipamahi oleh pemula
+* dapat di definisikan sebelum dan sesudah di deklarasi/dibuat function nya
+
+function expression
+
+* Harus di definisikan terlebih dahulu sebelum dipanggil
+* lebih powerfull :
+	- sebagai closure
+	- sebagai argumen untuk function lain
+	- IIFE (Immediately Invoked Function Expression)

@@ -1,0 +1,12 @@
+mhs.ips[2] // ini adalah contoh menampilkan array di dalam object
+
+mhs = object
+ips = property
+[2] = array index ke 2 (index array dimulai dari 0)
+
+
+mhs.alamat.kota // ini contoh menampilkan object di dalam object object
+
+mhs = object
+.alamat = object
+.kota = property

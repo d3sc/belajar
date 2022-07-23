@@ -1,0 +1,55 @@
+macam macam operator dan penjelasannya
+
+penjelasan :
+10 = nilai
+'10' = tipe data (string) 10
+
+
+
+
+ini === adalah operator identitas yang dapat membandingkan tipe data, dan nilai dan tipe datanya harus sama.
+
+contoh :
+
+10 === '10' ( dibaca 10 strict sama dengan string 10 )salah, karena kalau berbeda tipe data tidak di baca.
+false
+(nilai false karena berbeda tipe datanya ('10') berbeda walaupun nilainya sama (10).)
+
+
+
+
+
+
+kalau == adalah perbandingan yang sama maupun berbeda tipe data
+
+contoh :
+
+10 == '10' (nilai true karena walaupun berbeda tipe data tetapi nilainya harus sama. / lebih ke arah nilainya.)
+true
+
+
+
+
+
+lalu untuk != adalah (tidak sama dengan) sebuah operator untuk mengidentifikasi apakah nilai nya berbeda atau tidak, tak peduli walaupun berbeda tipe data.
+
+contoh :
+
+10 != '10' (dibaca = apakah 10 tidak sama dengan string 10) salah, karena 10 sama dengan string 10. walaupun berbeda tipe data akan terbaca.
+false
+(operator ini juga terbaca jika tipe data berbeda)
+
+
+
+
+
+sementara untuk !== adalah (strict tidak sama dengan) sebuah operator untuk mengidentifikasi apakah nilai nya berbeda atau tidak, kalu berbeda tipe data hasilnya akan true karena memang tidak sama dengan nilainya.
+
+contoh :
+
+10 !== '10' (dibaca = 10 strict tidak sama dengan string 10) ya benar, karena kalau berbeda tipe data tidak di baca.
+true
+
+(lebih ke arah nilainya harus berbeda agar menghasilkan true)
+
+
