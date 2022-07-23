@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+img {
+  width: 100%;
+}
+body {
+  background-color: #ddd;
+  font-size: 18px;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  margin: 50px;
+}
+/* Container */
+.container {
+  display: grid;
+  gap: 10px;
+}
+/* header */
+.header {
+  display: grid;
+  grid-template-areas:
+    "hero hero features-1"
+    "hero hero features-2";
+  gap: 5px;
+}
+.hero {
+  grid-area: hero;
+  min-height: 300px;
+  background-image: url(img/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 50px;
+}
+.hero > * {
+  display: none;
+}
+.features {
+  color: white;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.features:hover {
+  box-shadow: 0 0 5px 0#000;
+}
+.features-1 {
+  grid-area: features-1;
+  background-image: url(img/burung-1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.features-2 {
+  grid-area: features-2;
+  background-image: url(img/burung-2.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.features .price {
+  font-size: 3em;
+  font-weight: 200;
+}
+/* Navigation */
+.menu {
+  order: -1;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+}
+.menu .bird {
+  color: #333;
+  font-size: 1.3em;
+}
+.bird h1 {
+  font-weight: 400;
+}
+.menu-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 5px;
+  align-items: center;
+}
+.menu ul li a {
+  display: block;
+  background-color: #000;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px;
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+.menu ul li a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #f44336;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.menu ul li a:hover::after {
+  width: 70%;
+}
+/* Hamburger Menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+}
+.menu-toggle input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  left: -6px;
+  top: -5px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.menu-toggle span {
+  display: block;
+  background-color: #000;
+  width: 28px;
+  height: 3px;
+  border-radius: 3px;
+  transition: 0.5s;
+}
+
+/* Hamburger Menu Animation */
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+.menu-toggle input:checked ~ span:nth-child(2) {
+  background-color: white;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+.menu-toggle input:checked ~ span:nth-child(4) {
+  background-color: white;
+  transform: rotate(-45deg) translate(-1px, 0);
+}
+.menu-toggle input:checked ~ span:nth-child(3) {
+  transform: scale(0);
+}
+
+/* Service */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+.service {
+  background-color: white;
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+.service h3 {
+  font-size: 1.5em;
+}
+.service p {
+  font-weight: 200px;
+  letter-spacing: 1px;
+  font-size: 0.8em;
+}
+/* Responsive Breakpoint */
+@media (max-width: 1024px) {
+  .menu {
+    order: inherit;
+    grid-template-columns: 1fr;
+  }
+  .menu .bird {
+    display: none;
+  }
+  .hero > * {
+    display: block;
+    background-color: #000;
+    color: white;
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+  }
+}
+@media (max-width: 768px) {
+  header .features {
+    font-size: 0.7em;
+  }
+  .hero > * {
+    font-size: 1em;
+    font-weight: 400;
+  }
+  .menu {
+    order: -1;
+    justify-items: end;
+    margin-bottom: 5px;
+  }
+  .menu-toggle {
+    display: flex;
+    z-index: 3;
+  }
+  .menu ul {
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    background: #000;
+    z-index: 2;
+    transform: translateY(-100%);
+    transition: 0.5s;
+    opacity: 0;
+  }
+  .menu ul.slide {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 600px) {
+  .header {
+    grid-template-areas:
+      "hero"
+      "features-1"
+      "features-2";
+  }
+}

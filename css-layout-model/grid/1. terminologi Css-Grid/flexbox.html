@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        font-family: arial;
+        color: white;
+        text-transform: uppercase;
+        text-align: center;
+      }
+      .container {
+        width: 600px;
+        margin: 50px auto;
+        border: 5px solid black;
+        box-sizing: border-box;
+        padding: 5px;
+      }
+      header {
+        background-color: #b063d8;
+        padding: 40px 0;
+      }
+      .content {
+        display: flex;
+      }
+      .sidebar {
+        flex: 1;
+      }
+      .sidebar aside {
+        background-color: #2f93ff;
+        padding: 60px 0;
+      }
+      .sidebar nav {
+        background-color: #e47565;
+        padding: 100px 0;
+      }
+      main {
+        background-color: #e0aa77;
+        box-sizing: border-box;
+        flex: 1.5;
+        display: flex;
+        justify-content: center; /* untuk memindahkan item secara horizontal*/
+        align-items: center; /* Untuk memindahkan item secara vertikal*/
+      }
+      footer {
+        background-color: #666;
+        padding: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header><p>Header</p></header>
+      <div class="content">
+        <div class="sidebar">
+          <aside><p>aside</p></aside>
+          <nav><p>Navbar</p></nav>
+        </div>
+        <main><p>Main</p></main>
+      </div>
+      <footer><p>Footer</p></footer>
+    </div>
+  </body>
+</html>

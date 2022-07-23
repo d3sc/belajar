@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid | grid-alignment</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #ddd;
+      }
+      .container {
+        width: 80%;
+        margin: auto;
+        display: grid;
+        grid-template-rows: 120px 130px 130px;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 5px;
+
+        /* justify-items */
+        /* Justify-items untuk mensejajarkan grid-items pada sumbu horizontal. */
+        /* justify-items: start; */
+        justify-items: end;
+        /* justify-items: center; */
+        /* justify-items: stretch; */ /* Jika tidak disi dengan width maka item nya akan memenuhi ukurannya. */
+
+        /* align-items */
+        /* align-items untuk mensejajarkan grid-items pada sumbu vertikal. */
+        /* align-items: flex-start; */
+        /* align-items: center; */
+        /* align-items: flex-end; */
+        /* align-items: stretch; */ /* sama seperti justify-items: stretch; . tetapi jika align-items itu sumbu vertikal berarti, jika height tidak di isi maka akan memenuhi ukurannya. */
+
+        /* place-items */
+        /* place-items sebuah shorthand untuk menulis justify dan align-items dalam satu deklarasi. */
+        /* place-items: center; */ /* place-items: <align-items> <justify-items> . seperti itulah urutannya, jika justify dan align-items nya sama dapat ditulis satu saja seperti (place-items: center;) maka kedua menjadi center*/
+      }
+      .item {
+        border: 3px solid black;
+        height: 100px;
+        background-color: lightblue;
+      }
+      .item.i1,
+      .item.i4,
+      .item.i7 {
+        width: 130px;
+      }
+      .item.i2,
+      .item.i5,
+      .item.i8 {
+        width: 80px;
+      }
+      .item.i3,
+      .item.i6,
+      .item.i9 {
+        width: 170px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item i1">1</div>
+      <div class="item i2">2</div>
+      <div class="item i3">3</div>
+      <div class="item i4">4</div>
+      <div class="item i5">5</div>
+      <div class="item i6">6</div>
+      <div class="item i7">7</div>
+      <div class="item i8">8</div>
+      <div class="item i9">9</div>
+    </div>
+  </body>
+</html>

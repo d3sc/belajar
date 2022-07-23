@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid | Grid template</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #ddd;
+      }
+      .container {
+        width: 60%;
+        margin: 50px auto;
+        display: grid;
+        /* grid-template-rows: 50px 100px;
+        grid-template-columns: 1fr 2fr 3fr;
+        grid-template-areas: /* Untuk mendifinisikan grid template menggunakan nama dari area yang diisi pada property grid-area didalam item.Digunakan di dalam Container dan dalam item juga*/
+        /*'header header header'
+        'footer footer footer'*/
+        grid-template: "header header header" 50px "footer footer footer" 100px / 1fr 2fr 3fr; /* grid-template adalah sebuah short-hand dari grid-template-rows,columns,dan areas. yang pertama harus rows terlebih dahulu, lalu setelahnya columns. dan untuk pemberian grid-template-areas adalah dengan cara di pasang disamping nilai rows (Seperti contoh disamping!)*/
+      }
+      .item {
+        background-color: rgb(138, 209, 254);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+      }
+      .item:nth-child(even) {
+        background-color: rgb(255, 142, 142);
+      }
+      /* Responsive Breakpoint */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <!-- <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">9</div> -->
+    </div>
+  </body>
+</html>

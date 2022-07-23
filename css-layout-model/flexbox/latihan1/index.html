@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* Flexbox adalah sebuah model layout 1 dimensi yang dapat mengatur jarak dan penjajaran antar item dalam sebuah container.
+        1 dimensi yang dimaksud adalah kita hanya dapat mengatur elemen elemen secara horizontal dalam satu baris dan vertikal dalam satu kolom.
+        elemen pembungkus disebut container (parent)dan elemen di dalam nya disebut dengan item (child).
+        main axis = itu ketika elemen elemen nya di set sejajar secara horizontal, dan untuk yang vertikal namanya adalah cross axis.
+        ukuran dari container nya disebut dengan main size dan ukuran dari kolom nya disebut cross size.
+        main start dan main end adalah untuk menentukan awal dari elemen nya secara horizontal, kalau secara vertikal itu disebut dengan cross start dan cross end */
+
+      .container {
+        width: 600px;
+        height: 150px;
+        border: 5px solid #333;
+        margin: 30px auto;
+        padding: 5px;
+        box-sizing: border-box;
+        display: flex; /* Display harus dipasang di bagian container.*/
+        /* flex-direction:column-reverse; untuk mengatur arah atau urutan dalam item di dalam container.*/
+        /* flex-wrap: wrap; untuk memindahkan item ke baris bawah kalau tidak lebar cukup.*/
+        /* justify-content: center; untuk menentukan letak pada item dengan cara horizontal.*/
+        /* align-items: center; untuk menentukan letak pada item dengan cara vertikal.*/
+      }
+
+      .container div {
+        background-color: skyblue;
+        margin: 5px;
+        flex: 1; /* menggandakan 1 kali ke semua item yang ada di div */
+      }
+
+      .container div.dua {
+        flex: 3; /* akan menggandakan ukuran dari item yang diberikan */
+        align-self: center; /* align-self hanya untuk mengatur satu elemen yang ada pada baris, dan khusus 1 elemen saja berbeda dengan align-content */
+      }
+
+      /* .satu { untuk mengatur ulang urutan dari item tanpa mengubah html nya
+        order: 3;
+      }
+      .dua {
+        order: 4;
+      }
+      .tiga {
+        order: 2;
+      }
+      .empat {
+        order: 1;
+      }
+      */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="satu">1</div>
+      <div class="dua">2</div>
+      <div class="tiga">3</div>
+      <div class="empat">4</div>
+    </div>
+  </body>
+</html>

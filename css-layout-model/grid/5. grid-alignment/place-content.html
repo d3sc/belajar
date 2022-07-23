@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid | place-content</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #ddd;
+      }
+      .container {
+        width: 80%;
+        height: 500px;
+        margin: 20px auto;
+        display: grid;
+        grid-template-rows: 80px 80px; /* syarat menggunakan align-content itu harus menggunakan ukuran pixel (px). */
+        grid-template-columns: 120px 120px 120px; /* syarat ini berlaku juga di columns dan rows. */
+        gap: 5px;
+        place-content: center;
+        /* place content */
+
+        /* place-content adalah shorthand untuk menulis justify-content dan align-content dalam satu deklarasi. dengan syarat " ini bisa dilakukan ketika ukuran total grid lebih kecil dari ukuran containernya, biasanya ketika grid items nya menggukan ukuran yang fixed (px). " */
+        /* place-content: space-around; */ /*place-items: <align-content> <justify-content> . seperti itulah urutannya, jika justify dan align-content nya sama dapat ditulis satu saja seperti (place-items: center;) maka kedua menjadi center */
+      }
+      .item {
+        width: 100px;
+        height: 50px;
+        border: 3px solid black;
+        background-color: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item i1">1</div>
+      <div class="item i2">2</div>
+      <div class="item i3">3</div>
+      <div class="item i4">4</div>
+      <div class="item i5">5</div>
+      <div class="item i6">6</div>
+      <div class="item i7">7</div>
+      <div class="item i8">8</div>
+      <div class="item i9">9</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid | Grid Gap</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #ddd;
+      }
+      .container {
+        width: 50%;
+        margin: 50px auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /* gap untuk mengaturukuran grid-line / jarak antara row dan column */
+        /* cara lama untuk mengatur column = grid-column-gap: 10px; */
+        /* cara lama untuk mengatur row = grid-row-gap: 10px; */
+        /* cara lama untuk mengatur row dan column = grid-gap: 10px; */
+        /* cara baru untuk mengatur row = row-gap: 10px; */
+        /* cara baru untuk mengatur column = column-gap: 10px; */
+        /* cara baru untuk mengatur row dan column = gap: 10px; */
+      }
+      .item {
+        width: 100%;
+        background-color: rgb(138, 209, 254);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 100px;
+        box-sizing: border-box;
+      }
+      .item:nth-child(even) {
+        background-color: rgb(255, 142, 142);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">9</div>
+    </div>
+  </body>
+</html>

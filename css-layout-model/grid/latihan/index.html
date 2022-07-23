@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan Css | Card</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #fff;
+        font-family: "Poppins";
+        font-weight: 400;
+      }
+      .bungkus {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .container {
+        width: 80%;
+        margin: 50px auto;
+        display: grid;
+        grid-template-columns: repeat(3, 20%);
+        justify-content: center;
+        gap: 80px;
+        grid-template-areas: "item-1 item-2 item-3";
+      }
+      .item {
+        font-size: 1.2em;
+        height: 100px;
+        width: 100%;
+        padding: 10px 20px;
+        padding-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: lightblue;
+        text-align: center;
+        transition: all 0.6s ease;
+        border-radius: 10px;
+      }
+      .item:hover {
+        box-shadow: 0 0 6px 0 #000;
+      }
+      .item button {
+        margin-bottom: 10px;
+      }
+      .hero-btn {
+        display: inline-block;
+        text-decoration: none;
+        font-family: "Poppins";
+        color: #fff;
+        border: 1px solid #fff;
+        border-radius: 3px;
+        padding: 5px 17px;
+        font-size: 13px;
+        background: transparent;
+        position: relative;
+        cursor: pointer;
+        transition: all 0.7s;
+      }
+      .hero-btn:hover {
+        border: 1px solid orangered;
+        background-color: orangered;
+      }
+      .item-1 {
+        grid-area: item-1;
+      }
+      .item-2 {
+        grid-area: item-2;
+      }
+      .item-3 {
+        grid-area: item-3;
+      }
+      /* Responsive Breakpoint */
+      @media (max-width: 786px) {
+        .container {
+          grid-template-areas:
+            "item-1 item-1 "
+            "item-2 item-2 "
+            "item-3 item-3 ";
+        }
+        .item {
+          margin-left: 20vh;
+          justify-self: center;
+        }
+      }
+    </style>
+    <!-- My Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Pacifico&family=Poppins:wght@100;200;300;400;600;700&family=Raleway:ital,wght@0,300;0,500;1,300&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <section class="bungkus">
+      <div class="container">
+        <div class="item item-1">
+          <p>Item 1</p>
+          <button class="hero-btn">play</button>
+        </div>
+        <div class="item item-2">
+          <p>Item 2</p>
+          <button class="hero-btn">play</button>
+        </div>
+        <div class="item item-3">
+          <p>Item 3</p>
+          <button class="hero-btn">play</button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

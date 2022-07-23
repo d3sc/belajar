@@ -1,0 +1,148 @@
+html body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ddd;
+  height: 1000px;
+}
+
+/* Latihan 1 */
+
+.container1 {
+  width: 800px;
+  background-color: #fff;
+  margin: 50px auto 100px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.kolom-utama {
+  flex: 3;
+  order: 2;
+  padding-right: 30px;
+}
+
+.sidebar-satu {
+  flex: 1;
+  order: 1;
+}
+
+.sidebar-dua {
+  flex: 1;
+  order: 3;
+}
+
+/* Akhir latihan 1 */
+
+/* Latihan 2 */
+
+.container2 {
+  width: 800px;
+  margin: 50px auto;
+}
+
+.layanan {
+  width: 30%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.layanan.satu {
+  background-color: salmon;
+}
+
+.layanan.dua {
+  background-color: skyblue;
+}
+
+.layanan.tiga {
+  background-color: green;
+}
+/* Akhir latihan 2 */
+
+.container3 {
+  width: 800px;
+  margin: 50px auto;
+  padding-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.thumbnail {
+  flex-basis: 50%; /*Flex-basis = width*/
+}
+.thumbnail img {
+  width: 100%;
+}
+
+/* Akhir latihan 3 */
+
+/* Latihan 4 */
+.container4 {
+  width: 800px;
+  margin: 50px auto;
+  padding-top: 100px;
+  display: flex;
+  line-height: 1.65;
+}
+.card {
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  background-color: #eee;
+  overflow: hidden;
+  margin: 10px;
+  flex: 1;
+}
+.card .header {
+  height: 150px;
+  background-color: #666;
+}
+.card .content {
+  padding-bottom: 20px;
+  text-align: center;
+}
+.card.a {
+  transform: scale(1.13);
+}
+
+/* Akhir latihan 4 */
+
+/* Latihan 5 */
+.container5 {
+  width: 500px;
+  height: 500px;
+  margin: 50px auto;
+  border: 5px solid black;
+  display: flex; /* Menambahkan diplay: flex; dan margin: auto; dapat membuat elemen menjadi di tengah/Centering*/
+}
+.kotak {
+  width: 100px;
+  height: 100px;
+  background-color: brown;
+  color: white;
+  margin: auto;
+  display: flex;
+}
+.kotak span {
+  margin: auto;
+  text-align: center;
+}
+
+/* responsive */
+@media (min-width: 600px) {
+  .container2 {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .layanan {
+    width: 30%;
+  }
+  .thumbnail {
+    flex-basis: 25%;
+  }
+}

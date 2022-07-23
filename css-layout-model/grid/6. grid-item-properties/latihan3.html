@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid | Grid-area</title>
+    <style>
+      /* Grid item Properties itu hanya bisa digunakan di dalam item saja dan tidak bisa digunakan di dalam container. */
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #ddd;
+      }
+
+      .container {
+        width: 80%;
+        margin: 50px auto;
+        display: grid;
+        grid-template-columns: minmax(200px, 300px) 1fr 1fr;
+        grid-template-rows: repeat(3, 100px);
+      }
+
+      .item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .my-item {
+        /* grid-column-start: 2;
+        grid-row-start: 2;
+        grid-column-end: 4;
+        grid-row-end: 4; */
+
+        /* grid-area juga bisa dikatakan sebagai shorthand dari grid di atas */
+        grid-area: 3 / 1 / 4 / 2; /* urutannya seperti ini = grid-area: <grid-column-start> / <grid-row-start> / <grid-column-end> / <grid-row-end>; */
+
+        background-color: lightblue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="item my-item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <!-- <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">9</div> -->
+    </div>
+  </body>
+</html>

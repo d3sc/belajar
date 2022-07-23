@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+/* navbar */
+nav {
+  display: flex;
+  background-color: rgb(180, 78, 232);
+  justify-content: space-around;
+  /* padding: 20px 0; */
+  color: rgb(238, 192, 255);
+  height: 50px;
+  align-items: center;
+}
+.logo h4 {
+  font-weight: 500;
+  font-size: 1em;
+  font-family: "Pacifico";
+  letter-spacing: 3px;
+}
+nav ul {
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
+  list-style: none;
+}
+nav ul li a {
+  color: rgb(238, 192, 255);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-family: "montserrat";
+}
+nav ul li a:hover {
+  color: hsl(284, 62%, 93%);
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+}
+.menu-toggle input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  left: -6px;
+  top: -5px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.menu-toggle span {
+  display: block;
+  background-color: rgb(238, 192, 255);
+  width: 28px;
+  height: 3px;
+  border-radius: 3px;
+  transition: 0.5s;
+}
+
+/* Hamburger Menu Animation */
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+.menu-toggle input:checked ~ span:nth-child(2) {
+  background-color: white;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+.menu-toggle input:checked ~ span:nth-child(4) {
+  background-color: white;
+  transform: rotate(-45deg) translate(-1px, 0);
+}
+.menu-toggle input:checked ~ span:nth-child(3) {
+  transform: scale(0);
+}
+
+/* Responsive Breakpoint */
+
+/* Tablet size */
+@media screen and (max-width: 788px) {
+  nav ul {
+    width: 55%;
+  }
+}
+/* mobile Size */
+@media screen and (max-width: 576px) {
+  .menu-toggle {
+    display: flex;
+  }
+  nav ul {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 80%;
+    height: 100vh;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(180, 78, 232);
+    z-index: -1;
+    transform: translateX(100%);
+    transition: 0.5s;
+    opacity: 0;
+  }
+  nav ul.slide {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

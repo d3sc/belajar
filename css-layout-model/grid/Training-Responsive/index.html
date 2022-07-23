@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid | Toko Burung</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@100;200;300;400;600;700&family=Raleway:ital,wght@0,300;0,500;1,300&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="header">
+          <div class="hero">
+            <h2 class="heading">Bird Shop</h2>
+            <p class="sub-heading">Kenari Birds</p>
+          </div>
+          <div class="features features-1">
+            <h4 class="price">IDR 300K</h4>
+            <p class="item">Red Kenari</p>
+          </div>
+          <div class="features features-2">
+            <h4 class="price">IDR 250K</h4>
+            <p class="item">Brown Kenari</p>
+          </div>
+        </div>
+      </header>
+      <!-- nav -->
+
+      <nav class="menu">
+        <div class="menu-toggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="bird">
+          <h1>Bird Shop</h1>
+        </div>
+        <ul class="menu-list">
+          <li><a href="">Home</a></li>
+          <li><a href="">Products</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Gallery</a></li>
+        </ul>
+      </nav>
+
+      <section class="services">
+        <div class="service">
+          <h3>Empty</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum fugit ullam et in temporibus necessitatibus.</p>
+        </div>
+        <div class="service">
+          <h3>Empty</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum fugit ullam et in temporibus necessitatibus.</p>
+        </div>
+        <div class="service">
+          <h3>Empty</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum fugit ullam et in temporibus necessitatibus.</p>
+        </div>
+        <div class="service">
+          <h3>Empty</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum fugit ullam et in temporibus necessitatibus.</p>
+        </div>
+      </section>
+    </div>
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle input");
+      const nav = document.querySelector("nav ul");
+
+      menuToggle.addEventListener("click", function () {
+        nav.classList.toggle("slide");
+      });
+    </script>
+  </body>
+</html>

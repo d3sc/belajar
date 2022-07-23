@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid | Toko Burung</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@100;200;300;400;600;700&family=Raleway:ital,wght@0,300;0,500;1,300&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="header">
+          <div class="hero">
+            <h2 class="heading">Bird Shop</h2>
+            <p class="sub-heading">Kenari Birds</p>
+          </div>
+          <div class="features features-1">
+            <h4 class="price">IDR 300K</h4>
+            <p class="item">Red Kenari</p>
+            <div class="menu-toggle-1">
+              <input type="checkbox" />
+              <button class="hero-btn visit">Visit</button>
+            </div>
+          </div>
+          <div class="features features-2">
+            <h4 class="price">IDR 250K</h4>
+            <p class="item">Brown Kenari</p>
+            <div class="menu-toggle-2">
+              <input type="checkbox" />
+              <button class="hero-btn visit">Visit</button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- nav -->
+
+      <nav class="menu">
+        <div class="menu-toggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="bird">
+          <h1>Bird Shop</h1>
+        </div>
+        <ul class="menu-list">
+          <li><a href="">Home</a></li>
+          <li><a href="">Products</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Gallery</a></li>
+        </ul>
+      </nav>
+    </div>
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle input");
+      const nav = document.querySelector("nav ul");
+
+      menuToggle.addEventListener("click", function () {
+        nav.classList.toggle("slide");
+      });
+    </script>
+
+    <script>
+      const menuToggle1 = document.querySelector(".menu-toggle-1 input");
+      const nav1 = document.querySelector(".features-1");
+
+      menuToggle1.addEventListener("click", function () {
+        nav1.classList.toggle("click1");
+      });
+    </script>
+    <script>
+      const menuToggle2 = document.querySelector(".menu-toggle-2 input");
+      const nav2 = document.querySelector(".features-2");
+
+      menuToggle2.addEventListener("click", function () {
+        nav2.classList.toggle("click2");
+      });
+    </script>
+  </body>
+</html>

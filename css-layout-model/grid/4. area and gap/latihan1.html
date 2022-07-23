@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid | Grid-area</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #ddd;
+      }
+      .container {
+        width: 60%;
+        margin: 50px auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: /* Untuk mendifinisikan grid template menggunakan nama dari area yang diisi pada property grid-area didalam item.Digunakan di dalam Container dan dalam item juga*/
+          "header header header"
+          "sidebar sidebar sidebar"
+          "content content content"
+          "footer footer footer";
+      }
+      .item {
+        width: 100%;
+        background-color: rgb(138, 209, 254);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 100px;
+        box-sizing: border-box;
+      }
+      /* .item:nth-child(even) {
+        background-color: rgb(255, 142, 142);
+      } */
+      .header {
+        grid-area: header; /* Grid-area di isi disini*/
+        background-color: lightblue;
+      }
+      .sidebar {
+        grid-area: sidebar; /* Grid-area di isi disini*/
+        background-color: rgb(255, 255, 188);
+      }
+      .content {
+        grid-area: content; /* Grid-area di isi disini*/
+        background-color: rgb(177, 255, 177);
+      }
+      .footer {
+        grid-area: footer; /* Grid-area di isi disini*/
+        background-color: rgb(57, 57, 57);
+      }
+      /* Responsive Breakpoint */
+      @media screen and (min-width: 576px) {
+        .container {
+          grid-template-areas:
+            "header header header"
+            "sidebar content content"
+            "sidebar content content"
+            "footer footer footer";
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item header">1</div>
+      <div class="item sidebar">2</div>
+      <div class="item content">3</div>
+      <div class="item footer">4</div>
+      <!-- <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">9</div> -->
+    </div>
+  </body>
+</html>

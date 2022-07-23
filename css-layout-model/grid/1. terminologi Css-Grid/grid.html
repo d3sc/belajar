@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        font-family: arial;
+        color: white;
+        text-transform: uppercase;
+        text-align: center;
+      }
+      .container {
+        width: 600px;
+        margin: 50px auto;
+        border: 5px solid black;
+        box-sizing: border-box;
+        padding: 5px;
+        display: grid;
+        grid-template-areas:
+          "header header"
+          "aside main"
+          "nav main"
+          "footer footer";
+        grid-template-columns: 1fr 1.5fr;
+        grid-template-rows: 1fr 1fr 1.3fr;
+      }
+      header {
+        background-color: #b063d8;
+        padding: 40px 0;
+        grid-area: header;
+        display: flex; /*di dalam flex ini adalah trik untuk membuat item ke tengah*/
+        justify-content: center;
+        align-items: center;
+      }
+      aside {
+        background-color: #2f93ff;
+        padding: 60px 0;
+        grid-area: aside;
+      }
+      nav {
+        background-color: #e47565;
+        padding: 100px 0;
+        grid-area: nav;
+      }
+      main {
+        background-color: #e0aa77;
+        box-sizing: border-box;
+        grid-area: main;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      footer {
+        background-color: #666;
+        padding: 10px 0;
+        grid-area: footer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header><p>Header</p></header>
+      <aside><p>aside</p></aside>
+      <nav><p>Navbar</p></nav>
+      <main><p>Main</p></main>
+      <footer><p>Footer</p></footer>
+    </div>
+  </body>
+</html>
