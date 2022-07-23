@@ -1,0 +1,23 @@
+.container {
+    width: 800px;
+    border: 2px solid black;
+    margin: auto;
+    padding: 3px;
+}
+
+.kotak {
+    width: 80px;
+    height: 80px;
+    background-color: salmon;
+    color: white;
+    text-align: center;
+    line-height: 80px;
+    font-size: 30px;
+    float: left;
+}
+
+.clear {
+    clear: left;
+}
+
+/* clear untuk membersihkan float */

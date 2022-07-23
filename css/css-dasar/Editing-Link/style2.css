@@ -1,0 +1,49 @@
+.hello:link {
+	color: orange;
+}
+
+.hello:hover {
+	font-size: 20px;
+	font-family: arial;
+	color: red;
+}
+
+.hello:active {
+	font-style: italic;
+}
+
+.hello:visited {
+	color: green;
+}
+
+/* penjelasan tentang pseudo-class yang berhubungan dengan posisi elemen
+first-child = anak pertama
+last-child = anak terakhir
+nth-child = anak dengan urutan yang spesifik
+*/
+
+
+li:first-child a {
+	color: green;
+}
+
+li:last-child a {
+	color: #d17a17;
+}
+
+li:nth-child(3n-1) a {
+	color: red;
+}
+
+li:nth-child(3n-1) a:hover {
+	color: yellow;
+	font-size: 15px;
+}
+
+p:first-of-type {
+	color: red;
+}
+
+p:last-of-type {
+	color: blue;
+}

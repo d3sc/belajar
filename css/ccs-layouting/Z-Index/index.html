@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Z-index</title>
+        <style>
+            div {
+                height: 200px;
+                width: 200px;
+                position: absolute;
+            }
+
+            .satu {
+                background-color: salmon;
+                z-index: 3;
+            }
+
+            .dua {
+                background-color: lightgreen;
+                top: 100px;
+                left: 100px;
+                z-index: 2;
+            }
+            .tiga {
+                background-color: royalblue;
+                top: 200px;
+                left: 200px;
+                z-index: 1;
+            }
+
+            /* Materi, Z-index adalah pengatur untuk mengatur dimensi position yang hanya berfungsi pada value nonstatic ( di html ini terdapat value absolute, tepatnya di div di atas) */
+            /* Z-index jika digunakan akan mengatur tata letak dimensi dari block yang lain. (coba saja kalau tidak percaya.) */
+            /* jika nilai Z-index lebih besar dari Z-index lain nya maka niali Z-index yang lebih besar lah yang bisa menumpuk dimensi paling atas. */
+
+        </style>
+    </head>
+<body>
+    
+<div class="satu"></div>
+<div class="dua"></div>
+<div class="tiga"></div>
+
+
+</body>
+</html>

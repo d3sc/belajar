@@ -1,0 +1,42 @@
+body {
+	font-family: arial;
+}
+
+/* di atas adalah salah satu selector tipe html. */
+
+h1, h2 {
+	color: green;
+}
+
+ul li a {
+	color: orange;
+}
+
+ol li a {
+	color: red;
+}
+
+/* , (koma) dibaca dan
+	 (spasi) dibaca di dalam, ul -> li -> a */
+
+#p1 {
+	color: orange;
+}
+
+.p2 {
+	color: red;
+}
+
+/* id dan class
+id = #
+class = .
+
+saran pada saat menggunakan css disarankan menggunakan class! */
+.cetak-tebal {
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+
+p.cetak-tebal {
+	font-size: 20px;
+}

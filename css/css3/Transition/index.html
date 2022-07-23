@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Transition</title>
+        <style>
+            /*properti transition memungkinkan kita dapat mengubah nilai dari property HTML secara halus.*/
+            /*Transistion : [property] <durasi> [fungsi] [delay];*/
+            /*yang tidak bisa di buat animasi (non-animatable property) adalah font-family, display, position,...*/
+            /*macam macam value dari transition =
+                - ease
+                - ease-in
+                - ease-out
+                - ease-in-out
+                - linear
+                - cubic-bezier (w,x,y,z), cubic bezier adalah suatu value dari transition yang menggunakan curva.
+            */
+            /*Delay di pasang setelah waktu, dan delay dapat digunakan pada multiple transitio*/
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            .kotak {
+                width: 200px;
+                height: 200px;
+                background-color: salmon;
+                transition: 1s; /*Default value dari transition adalah ease*/
+            }
+                /*Transition dapat di jalankan 1 saja / lebih*/
+            .container {
+                width: 900px;
+                margin: 10px auto;
+                border: 3px solid black;
+            }
+            .container:hover .kotak{
+                transform: rotate(45deg);
+                margin-left: 700px;
+                background-color: royalblue;
+            }
+        </style>
+    </head>
+<body>
+
+<div class="container">
+    <div class="kotak"></div>
+</div>
+
+</body>
+</html>

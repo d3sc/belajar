@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Radial Gradient</title>
+        <Style>
+            /*Radial Gradient berguna untuk menciptakan gradasi warna yang melingkar dan mempunyai value yang sama seperti Linear gradient, warna awal dari Radial Gradient akan menjadi warna pusat di lingkaran nya.*/
+            /*Radial Gradient juga bisa diberi multiple color.*/
+            /*tipe dari Radial Gradient adalah Ellipse dan Circle*/
+            /*Jangkauan adalah jarak dari pusat gradient ke sisi terluarnya.
+                Value dari jangkauan adalah :
+                    - closet-corner : jarak ke sudut terdekat
+                    - clossed-side : jarak ke sisi terdekat
+                    - farthest-corner : jarak ke sudut terjauh
+                    - farthest-side : jarak ke sudut terjauh 
+                    */
+            /*Posisi berguna untuk memindahkan pusat gradient dengan menambahkan keyword at , posisi-y dan posisi-x
+                value dari posisi
+                    -y : top, center, bottom
+                    -x : right, center, right
+                    dan bisa juga diberi pixel/px
+                    */
+            div {
+                width: 500px;
+                height: 300px;
+                margin: 50px auto;
+                background-image: radial-gradient(
+                    circle farthest-side at top left, red 50%, blue);
+            }
+        </Style>
+    </head>
+<body>
+
+<div></div>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Position 1</title>
+    <style>
+        body {
+            height: 2000px;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            margin: auto;
+        }
+        
+        .satu {
+            background-color: lightgreen;
+        }
+        
+        .dua {
+            background-color: violet;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+        
+        /* Kegunaan properti position adalah jika pada saat memindahkan block dibawahnya tidak menempel ke block yang dipindahkan ( block yang dimaksud adalah contoh div di html ini. )*/
+        
+            /* Macam macam value position : static, relative, absolute, fixed. */
+            /* Value Static adalah value utama dari property position dan jika dijalankan tidak terjadi apa-apa. */
+            /* Value Relative adalah value yang dimana jika dijalankan akan membuat satu dimensi di atas block lain. */
+            /* Value Absolute relatif megikuti parent nya, dan di html ini parent dari div adalah body, selama parentnya memiliki posisi yang sama dengan block/element yang diberi value absolute ( coba dilihat bagian container teradpat position relative, karena container/parentnya memiliki dimensi yang sama dengan block/element ke dua.) */
+            /* Value Fixed adalah value yang dimana jika kia menggerakannya, maka dia akan relatif terhadap window browser  */
+        
+        
+        .tiga {
+            background-color: gold;
+        }
+        
+        .container {
+            width: 600px;
+            height: 650px;
+            border: 10px solid green;
+            position: relative;
+        }
+        </style>
+</head>
+<body>
+    <div class="container">
+
+    <div class="satu">helo</div>
+    <div class="dua">hi</div>
+    <div class="tiga">dasa</div>
+
+    </div>
+</body>
+</html>

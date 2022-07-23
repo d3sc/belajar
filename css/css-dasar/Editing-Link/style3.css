@@ -1,0 +1,35 @@
+.hello:link {
+  color: orange;
+}
+
+.hello:hover {
+  font-size: 20px;
+  font-family: arial;
+  color: black;
+}
+
+.hello:active {
+  font-style: italic;
+}
+
+.hello:visited {
+  color: green;
+}
+
+/* Penjelasan tentang odd dan even =
+odd = adalah ganjil
+even = adalah genap
+*/
+
+li:nth-child(odd) a {
+  color: black;
+}
+
+li:nth-child(even) a {
+  color: yellow;
+}
+
+li:nth-child(odd) a:hover {
+  color: green;
+  font-size: 10px;
+}

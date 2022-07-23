@@ -1,0 +1,13 @@
+div {
+    width: 600px;
+    margin: 10px auto;
+    box-sizing: border-box;
+}
+
+.satu {
+    background-color: royalblue;
+    padding: 10px auto;
+    border: 5px dashed black;
+}
+
+/*box-sizzing memiliki kegunaan akan tetap menyamai widht*/

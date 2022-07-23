@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Animation</title>
+    <style>
+      /*beberap Value dari Animasi : [name] [duration] [timing-function] [delay] [iteration-count] [direction] [fill-mode] [play-state] */
+      .kotak {
+        width: 200px;
+        height: 200px;
+        background-color: skyblue;
+        animation: tikus 2s ease 2 alternate; /* animation: [name adalah nama dari animasi yang dipasang di keyframes] [duration adalah durasi dari animasi, dapat ditulis dengan angka saja] [iteration-count= bisa ditulis angka maupun infinite] [direction= dapat ditulis dengan normal,reverse,alternate, alternate-reverse] [fill-mode= dapat ditulis none,forwards,backwards,dan both] [play-state= dapat ditulis dengan pause dan running]*/
+      }
+      @keyframes tikus {
+        0% {
+          width: 200px;
+        }
+        50% {
+          width: 500px;
+          height: 200px;
+        }
+        100% {
+          width: 500px;
+          height: 500px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="kotak"></div>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+/* Belajar mengenai text styling */
+
+h1 {
+	font-size: 150px;
+	color: #51e61a;
+	text-align: center;
+	text-decoration: line-through;
+	text-transform: capitalize;
+}
+
+p {
+	text-indent: 60px;
+	text-transform: capitalize;
+	letter-spacing: 2px;
+	word-spacing: 10px;
+}
+
+/* text center = left, right, center, justify */
+
+/* mencari warna bisa di web colorpicker.com */
+
+a {
+	text-decoration: none;
+}

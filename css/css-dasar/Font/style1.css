@@ -1,0 +1,15 @@
+/* Belajar mengenai font Styling */
+
+h1 {
+	font-family: arial, verdana, sans-serif;
+	font-size: 100px;
+	font-weight: lighter;
+	font-variant: small-caps;
+	font-style: italic;
+}
+
+p {
+	font-family: georgia, sans;
+	font-size: 20px;
+	line-height: 50px
+}

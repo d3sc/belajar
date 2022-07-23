@@ -1,0 +1,13 @@
+ul#sarapan li {
+    color: green;
+}
+
+ul#sarapan li.favorit {
+    color: red;
+}
+
+
+img.upil {
+    float: left;
+    margin: 5px;
+}

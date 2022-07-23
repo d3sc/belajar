@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Opacity</title>
+        <style>
+            body {
+                background-image: url(bg/sativa.png);
+            }
+            /* Properti baru yaitu RGBA (red green blue alpha) untuk memberikan warna pada sebuah elemen, dan alpha untuk transparansi yang mirip dengan opacity dan tidak mempengaruhi child nya.*/
+            /* RGBA hanya bisa diberikan pada elemen yang bisa diberi warna.*/
+            /* Lalu ada HSLa (Hue Saturation Light alpha) yaitu untuk mengatur warna juga seperti itulah kira kira :)*/
+            .satu {
+                width: 300px;
+                height: 300px;
+                background-color: RGBA(255,102,0,0);
+                border-radius: 50%;
+            }
+            
+
+            .dua {
+                width: 100px;
+                height: 100px;
+                background-color: blue;
+                opacity: 1;
+                border-radius: 50%;
+                position: absolute;
+                top: 17%;
+                left: 9%;
+            }
+            /* kedua div itu memiliki transparansi yang sama karena mengikuti perwarisan dari parent nya, jadi kedua div itu memiliki transparansi yang sama walaupun opacity dari div dua di ganti menjadi .1 */
+        </style>
+    </head>
+<body>
+    
+    <div class="satu">
+        <div class="dua"></div>
+    </div>
+
+</body>
+</html>

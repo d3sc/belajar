@@ -1,0 +1,16 @@
+body {
+	background-color: white;
+}
+
+.c1 {
+	/* font */
+
+	font-family: arial;
+	font-size: 60px;
+	font-variant: small-caps;
+
+	/* background */
+	background-image: url(gambar1/gradient.png);
+	background-repeat: repeat-x;
+	background-position: bottom;
+}

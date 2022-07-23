@@ -1,0 +1,15 @@
+body {
+  font-family: arial;
+  color: darkgray;
+}
+
+/* kektika tidak ditambahkan inhenrit link tidak akan berubah warna nya! */
+
+a:link {
+  color: green;
+}
+
+a:hover {
+  color: blue;
+  font-size: 15px;
+}

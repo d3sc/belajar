@@ -1,0 +1,35 @@
+body{
+	background-color: white;
+	background-image: url(gambar/bghitam.png);
+	background-repeat: repeat-x;
+	background-position: bottom;
+}
+
+/* shrothand dari background =
+	background : color url() position repeat;
+	*/
+
+
+
+/* Jika memasang property background-repeat: no-repeat;
+,kita bisa memasang property background-position.
+
+x= kesamping
+y= kebawah
+
+value dari background-position =
+y = top, center, botom,
+x = left,center,right*/
+
+h1 {
+	font-size: 60px;
+	font-family: arial;
+	font-variant: small-caps;
+	word-spacing: 2px;
+	letter-spacing: 2px;
+	color: red;
+}
+
+p {
+	color: red;
+}

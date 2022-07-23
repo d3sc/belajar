@@ -1,0 +1,23 @@
+.satu {
+    width: 200px;
+    height: 200px;
+    background-color: lightgreen;
+    margin: 20px auto;
+    padding: 50px;
+    border: 5px double black;
+}
+
+/* padding tidak bisa diberi nlai negatif/auto */
+
+/*Border : width style color*/
+/*style = solid,dotted,dashed,double*/
+
+.dua {
+    background-color: royalblue;
+    width: 600px;
+    padding: 10px auto;
+    border: 5px dashed black;
+    box-sizing: border-box;
+}
+
+/*box-sizzing memiliki kegunaan akan tetap menyamai widht*/

@@ -1,0 +1,12 @@
+h1 {
+	color: green;
+	font-family: arial-bold;
+	font-size: 30px;
+	text-align: center;
+
+}
+
+/* struktur css =
+selector { 
+	property: value; 
+}

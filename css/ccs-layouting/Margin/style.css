@@ -1,0 +1,25 @@
+.satu {
+    width: 200px;
+    height: 200px;
+    background-color: lightgreen;
+    margin: 10px 20px 30px 40px;
+}
+
+/*jika ditulis 4 nilai margin seperti diatas cara membacanya seperti jarum jam mulai dari atas kanan bawah kiri*/
+
+
+/*overlapping = kalau vertikal margin yang dipilih adalah yang terbesar sedangkan kalau horizontal margin nya akan dijumlah dengan margin kiri dan kanan*/
+
+.dua {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    margin-bottom: 40px;
+}
+
+.tiga {
+    width: 50px;
+    height: 50px;
+    background-color: violet;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

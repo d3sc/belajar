@@ -1,0 +1,21 @@
+body {
+	background :black url(gambar/bghitam.png) bottom repeat-x;
+}
+
+
+h1 {
+	color: red;
+	text-align: center;
+	letter-spacing: 5px;
+	font-size: 50px;
+	font-variant: small-caps;
+	font-variant: italic
+}
+
+p {
+	color: red;
+	letter-spacing: 2px;
+	word-spacing: 3px;
+	text-transform: capitalize;
+	text-indent: 20px;
+}
