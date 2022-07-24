@@ -1,0 +1,1 @@
+gaya format object literal, yaitu penulisan object dengan langsung menuliskan key dan value-nya dalam Object yang dibuat.
