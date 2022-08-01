@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Callback | Javascript Async</title>
+  </head>
+  <body>
+    <button onclick="buttonClick();">button</button>
+  </body>
+  <script>
+    function callback() {
+      console.log("callback");
+    }
+
+    function buttonClick() {
+      // Jika menggunakan Synchronous, function callback akan lebih dulu dijalankan. lalu setelah itu console.log dibawah akan dijalankan.
+      // callback();
+
+      // Jika menggunakan Async, function callback akan dilewatkan. dan console.log() akan berjalan.
+      // function callback akan menunggu dijalankan selama 5 detik.
+      setTimeout(() => {
+        callback();
+      }, 5000);
+      // console.log() akan tetap dijalankan.
+      console.log("Success click button!");
+    }
+  </script>
+</html>

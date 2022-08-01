@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ajax | Javascript Async</title>
+  </head>
+  <body>
+    <input type="text" id="keyword" />
+    <button onclick="buttonClick();">Click</button>
+
+    <ul id="condition"></ul>
+  </body>
+  <script>
+    // mengambil data url di web WeatherApi dan diambil data nya
+    function getProductsUrl(keyword) {
+      return `http://api.weatherapi.com/v1/current.json?key=7c1bf4fa4c284fa58b361846221206&aqi=no&q=${keyword}`;
+    }
+
+    // Mengambil product sesuai keyword pada input
+    function getProducts(keyword) {
+      //   memanggil object ajax (new XMLHttpRequest()) dan memasukkan nya kedalam var const ajax
+      const ajax = new XMLHttpRequest();
+
+      //   Ajax bersifat Async, jadi perlu waktu untuk mengambil datanya.
+      const url = getProductsUrl(keyword);
+      // Membuat request dengan method GET dan arg kedua di isi dengan url
+      ajax.open("GET", url);
+
+      // jika menggunakan method send, semua request akan dikirim ke server secara Async.
+      ajax.send();
+
+      //   Menggunakan callback ajax, dengan menggunakan ajax.onload
+      ajax.onload = function () {
+        // ajax.responseText berisi data yang tidak rapih sebelum di parse menjadi json. tetapi setelah di parse menjadi json dia akan menjadi rapih.
+        const data = JSON.parse(ajax.responseText);
+
+        // Jika var data ditampilkan maka akan membentuk data json.
+        // console.log(data);
+
+        // Menjalankan Funct clearCondition()
+        clearCondition();
+        // memasukkan data kedalam parameter funct displayWeather
+        displayWeather(data);
+      };
+
+      //   Tidak bisa dilakukan secara Sync, karena data ajax dijalankan secara Async
+      //   const res = JSON.parse(ajax.responseText);
+      //   console.log(res);
+    }
+
+    // Membersihkan product (membersihkan ul weather)
+    function clearCondition() {
+      const weatherUl = document.getElementById("condition");
+      weatherUl.textContent = "";
+    }
+
+    // mengambil isi dari data cuaca
+    function displayWeather(data) {
+      const resWeather = data.current.condition.text;
+      const resCountry = data.location.country;
+
+      //   Menampilkan data caca
+      //   console.log(data);
+
+      displayConditionWeathers(resWeather, resCountry);
+    }
+
+    // menampilkan data product kedalam html di ul li
+    function displayConditionWeathers(condition, country) {
+      const weatherLi = document.createElement("li");
+      weatherLi.textContent = condition;
+      const weatherLi2 = document.createElement("li");
+      weatherLi2.textContent = country;
+
+      const weatherUl = document.getElementById("condition");
+      weatherUl.appendChild(weatherLi2);
+      weatherUl.appendChild(weatherLi);
+    }
+
+    // Melakukan event pada saat button di click
+    function buttonClick() {
+      getProducts(document.getElementById("keyword").value);
+      console.log("Button Success!");
+    }
+  </script>
+</html>
